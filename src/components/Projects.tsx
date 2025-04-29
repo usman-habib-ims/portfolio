@@ -1,14 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
-import ProjectCard from '@/components/ProjectCard'
-import Skills from '@/components/Skills'
-import Certifications from '@/components/Certifications'
-import Contact from '@/components/Contact'
-import About from '@/components/About'
-import Experience from '@/components/Experience'
-import Hero from '@/components/Hero'
-import Projects from '@/components/Projects'
-import { motion } from "framer-motion";
+'use client'
+
+import { motion } from 'framer-motion'
+import ProjectCard from './ProjectCard'
 
 const projects = [
   {
@@ -61,29 +54,25 @@ const projects = [
   }
 ]
 
-export default function Home() {
+export default function Projects() {
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <Hero />
-
-      {/* About Me Section */}
-      <About />
-
-      {/* Experience Section */}
-      <Experience />
-
-      {/* Skills Section */}
-      <Skills />
-
-      {/* Certifications Section */}
-      <Certifications />
-
-      {/* Projects Section */}
-      <Projects />
-
-      {/* Contact Section */}
-      <Contact />
-    </div>
-  );
-}
+    <section id="projects" className="py-20 bg-gradient-to-b from-gray-800 to-gray-900">
+      <div className="container mx-auto px-4">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-3xl font-bold text-center mb-12 text-white"
+        >
+          Projects
+        </motion.h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <ProjectCard key={project.title} {...project} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+} 
