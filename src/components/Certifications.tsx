@@ -14,7 +14,7 @@ const certifications: Certification[] = [
     title: 'AWS Cloud Technical Essentials',
     issuer: 'Coursera',
     platform: 'Coursera',
-    date: '2024'
+    date: '2025'
   },
   {
     title: 'Technical Support Fundamentals',
@@ -26,13 +26,13 @@ const certifications: Certification[] = [
     title: 'Introduction to Python',
     issuer: '365 Data Science',
     platform: '365 Data Science',
-    date: '2024'
+    date: '2021'
   },
   {
     title: 'Google Project Management',
     issuer: 'Coursera',
     platform: 'Coursera',
-    date: '2024'
+    date: '2025'
   }
 ]
 

@@ -18,7 +18,7 @@ const skillCategories: SkillCategory[] = [
   },
   {
     title: 'Cloud Computing',
-    skills: ['AWS (EC2, S3, RDS, Cloud Front, IAM)']
+    skills: ['AWS (EC2, S3, VPC, Cloud Watch, IAM)']
   },
   {
     title: 'Tools',
